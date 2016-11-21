@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.example.alexapperley.augmentedrealitytest.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <com.example.alexapperley.augmentedrealitytest.MainGameView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!-- You can draw ontop the the before mentioned view, or you can just make
+     another to just contain your drawings. -->
+
+    <com.example.alexapperley.augmentedrealitytest.GhostView
+        android:id="@+id/ghostView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:id="@+id/buttonPanel"
+            style="?metaButtonBarStyle"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:drawableLeft="@android:drawable/ic_menu_camera"
+                android:layout_width="55dp"
+                android:gravity="center"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_weight="1.04" />
+        </LinearLayout>
+    <!--</FrameLayout>-->
+</FrameLayout>
